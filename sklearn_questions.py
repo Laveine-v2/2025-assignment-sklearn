@@ -103,7 +103,6 @@ class KNearestNeighbors(ClassifierMixin, BaseEstimator):
         y : ndarray, shape (n_test_samples,)
             Predicted class labels for each test data sample.
         """
-
         check_is_fitted(self)
 
         X = validate_data(self, X, reset=False)
@@ -221,7 +220,6 @@ class MonthlySplit(BaseCrossValidator):
         idx_test : ndarray
             The testing set indices for that split.
         """
-
         if self.time_col == 'index':
             time_data = X.index
             if not isinstance(time_data, pd.DatetimeIndex):
